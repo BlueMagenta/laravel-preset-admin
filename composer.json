@@ -1,0 +1,26 @@
+{
+    "name": "bluemagenta/admin-preset",
+    "description": "Custom, Admin Preset for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "haryo adi nugroho",
+            "email": "haryo.webapp@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "BlueMagenta\\AdminPreset": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BlueMagenta\\AdminPreset\\AdminPresetServiceProvicer"
+            ]
+        }
+    }
+}

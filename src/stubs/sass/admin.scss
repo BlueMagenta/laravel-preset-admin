@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+main scss file for admin
+*/
+
+@import "vendor";
+@import "abstracts/index";
+@import "base/index";
+@import "components/index";
+@import "layout/index";
+@import "pages/index";
+@import "monkeypatch";
