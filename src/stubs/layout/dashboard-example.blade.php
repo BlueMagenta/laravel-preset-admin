@@ -20,7 +20,7 @@
     {{--main content--}}
     <section class="content container-fluid">
         
-        {{-- box component --}}
+        {{-- box component. more info see https://adminlte.io/docs/2.4/boxes --}}
         <div class="box">
         
             {{-- box header --}}
@@ -37,7 +37,7 @@
             <div class="box-footer">
                 Footer
             </div>
-            
+
         </div>
         
     </section>

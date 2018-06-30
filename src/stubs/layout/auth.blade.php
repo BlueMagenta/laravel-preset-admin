@@ -1,3 +1,12 @@
+{{-- 
+    auth template
+    more info see admin-lte/pages/examples/login.html
+    section:
+        head
+        content
+        js
+    --}}
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +17,7 @@
 </head>
 
 <body class="hold-transition login-page">
-<div id="app-admin" class="login-box">
+<div class="login-box">
 
     {{--logo--}}
     <div class="login-logo">
@@ -25,9 +34,8 @@
 </div>
 
 {{--js script--}}
-@section('js')
-    <script src="{{ mix('js/admin.js') }}"></script>
-@show
+<script src="{{ mix('js/admin.js') }}"></script>
+@yield('js')
 
 </body>
 </html>
