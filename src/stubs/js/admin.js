@@ -2,13 +2,15 @@
  * main js file
  */
 
-import './config/vendor';
-import config from './config/global';
-import functions from './functions/index';
+import './vendor';
+import ready from './ready';
+import functions from './functions';
 
+//make jQuery accessible from views
+global.$ = global.jQuery = $;
 
-// bind indexed js functions to window object
+//make our functions from functions.js accessible from views
 global.admin = functions;
 
-// bind the config to document ready event
+//bind ready.js to document ready event
 $(config);

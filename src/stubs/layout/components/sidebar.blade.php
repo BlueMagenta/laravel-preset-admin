@@ -1,6 +1,10 @@
+{{-- 
+    sidebar component. usually containing menu
+--}}
+
 {{--disable this by default since mostly is unused. uncomment to activate--}}
 {{--Sidebar user panel--}}
-<div class="user-panel">
+{{-- <div class="user-panel">
     <div class="pull-left image">
         <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
     </div>
@@ -9,10 +13,10 @@
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
     </div>
-</div>
+</div> --}}
 
 {{--search form--}}
-<form action="#" method="get" class="sidebar-form">
+{{-- <form action="#" method="get" class="sidebar-form">
     <div class="input-group">
         <input type="text" name="q" class="form-control" placeholder="Search...">
         <span class="input-group-btn">
@@ -21,7 +25,7 @@
             </button>
         </span>
     </div>
-</form>
+</form> --}}
 
 
 {{--Sidebar Menu--}}

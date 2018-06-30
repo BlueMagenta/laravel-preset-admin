@@ -1,8 +1,8 @@
 /**
- * global config / set up that affect the site
+ * global script that will be executed on document ready
  */
 
-export default function () {
+ export default function(){
 
     //bind csrf token from html head to ajax
     $.ajaxSetup({
@@ -17,8 +17,4 @@ export default function () {
         radioClass: 'iradio_square-blue',
         increaseArea: '20%' /* optional */
     });
-
-    //make jQuery accessible from blade views
-    global.$ = global.jQuery = $;
-
-
+ }
