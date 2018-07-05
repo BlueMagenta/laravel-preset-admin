@@ -28,8 +28,7 @@ class AdminPreset extends Preset
     protected static function updatePackageArray(array $packages)
     {
         $dependencies = [
-            'jquery' => '~3.3.1',
-            'bootstrap' => '~3.3',
+            'admin-lte' => '~2.4',
             'icheck'    => '~1.0.2'
         ];
         return array_merge($dependencies, $packages);

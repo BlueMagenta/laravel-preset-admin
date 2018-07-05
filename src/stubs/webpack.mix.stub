@@ -2,5 +2,5 @@
 mix.autoload({
         jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'],
     })
-    .js('resources/assets/js/admin/admin.js', 'public/js')
-    .sass('resources/assets/sass/admin/admin.scss', 'public/css');
+    .js('resources/assets/js/admin.js', 'public/js')
+    .sass('resources/assets/sass/admin.scss', 'public/css');

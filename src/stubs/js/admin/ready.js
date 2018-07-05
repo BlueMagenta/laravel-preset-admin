@@ -12,9 +12,12 @@
     });
 
     //init icheck plugin
-    $('input[data-icheck=true]').iCheck({
+    $('[data-icheck=true]').iCheck({
         checkboxClass: 'icheckbox_square-blue',
         radioClass: 'iradio_square-blue',
         increaseArea: '20%' /* optional */
     });
+
+    // init sidebar menu tree
+    $('.sidebar-menu').tree()
  }

@@ -83,11 +83,6 @@
 
     {{--js script--}}
     <script src="{{ mix('js/admin.js') }}"></script>
-    <script>
-        $(document).ready(function () {
-            $('.sidebar-menu').tree()
-        })
-    </script>
     @yield('js')
 
 </body>
