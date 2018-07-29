@@ -2,7 +2,9 @@
  * js functions
  */
 
-function foo(){}
+function foo(){
+    //your custom js function
+}
 
 export {
     foo
