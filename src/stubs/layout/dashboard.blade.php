@@ -16,7 +16,7 @@
 
 <head>
 @section('head')
-    @include('layouts.admin.components.head')
+    @include('layouts.admin.partials.head')
 @show
 </head>
 
@@ -26,7 +26,7 @@
         {{--Main header section--}}
         <header class="main-header">
             @section('header')
-                @include('layouts.admin.components.header')
+                @include('layouts.admin.partials.header')
             @show
         </header>
 
@@ -34,7 +34,7 @@
         <aside class="main-sidebar">
             <section class="sidebar">
             @section('sidebar')
-                @include('layouts.admin.components.sidebar')
+                @include('layouts.admin.partials.sidebar')
             @show
             </section>
         </aside>
@@ -63,7 +63,7 @@
         {{--footer section--}}
         <footer class="main-footer">
         @section('footer')
-            @include('layouts.admin.components.footer')
+            @include('layouts.admin.partials.footer')
         @show
         </footer>
 
@@ -71,7 +71,7 @@
         {{-- control sidebar (right sidebar) section --}}
         {{-- <aside class="control-sidebar control-sidebar-dark">
         @section('control-sidebar')
-            @include('layouts.admin.components.control-sidebar')
+            @include('layouts.admin.partials.control-sidebar')
         @show
         </aside>
         <div class="control-sidebar-bg"></div> --}}

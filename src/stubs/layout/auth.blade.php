@@ -12,7 +12,7 @@
 
 <head>
 @section('head')
-    @include('layouts.admin.components.head')
+    @include('layouts.admin.partials.head')
 @show
 </head>
 
