@@ -1,0 +1,7 @@
+@import "~simple-line-icons/scss/simple-line-icons";
+@import "~@coreui/coreui/scss/coreui";
+
+//fix logo width since we remove a button next to it
+.app-header .navbar-brand{
+  width: 200px;
+}

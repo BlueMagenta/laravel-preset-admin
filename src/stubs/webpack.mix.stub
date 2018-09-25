@@ -1,6 +1,6 @@
 
-mix.autoload({
+mix.js('resources/admin/admin.js', 'public/js')
+    .sass('resources/admin/admin.scss', 'public/css')
+    .autoload({
         jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'],
-    })
-    .js('resources/assets/js/admin/admin.js', 'public/js')
-    .sass('resources/assets/sass/admin/admin.scss', 'public/css');
+    });
