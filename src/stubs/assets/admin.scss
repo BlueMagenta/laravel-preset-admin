@@ -1,5 +1,10 @@
-@import "~simple-line-icons/scss/simple-line-icons";
 @import "~@coreui/coreui/scss/coreui";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+@import "~datatables.net-responsive-bs4/css/responsive.bootstrap4.css";
 
 //fix logo width since we remove a button next to it
 .app-header .navbar-brand{

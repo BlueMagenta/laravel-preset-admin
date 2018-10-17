@@ -29,9 +29,12 @@ class AdminPreset extends Preset
     {
         $dependencies = [
             '@coreui/coreui'=> '^2.0.4',
+            '@fortawesome/fontawesome-free'=> '^5.3.1',
             'bootstrap' => '^4.0.0',
+            'datatables.net-bs4'=> "^1.10.19",
+            'datatables.net-responsive-bs4'=> '^2.2.3',
+            'jquery' => '^3.3.1',
             'perfect-scrollbar' => '^1.4.0',
-            'simple-line-icons'    => '^2.4.1'
         ];
         return array_merge($dependencies, $packages);
     }
