@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        {{--datatable cart--}}
+        {{--datatable zero config--}}
         <div class="card">
             <div class="card-body table-responsive-sm">
                 <table class="table table table-hover" data-toggle="datatable">
@@ -55,6 +55,29 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="card">
+            <form class="card-body">
+
+                {{--select2 zero config--}}
+                <div class="form-row">
+                    <div class="col-sm-2">
+                        <label>select2</label>
+                        <p class="text-muted">select input using select2 library</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <select class="form-control" data-toggle="select2">
+                            <option>options</option>
+                            <option>options</option>
+                            <option>options</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-danger">optional error message</p>
+                    </div>
+                </div>
+            </form>
         </div>
 
     </div>
