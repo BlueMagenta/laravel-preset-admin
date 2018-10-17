@@ -36,6 +36,7 @@ class AdminPreset extends Preset
             'datatables.net-responsive-bs4'=> '^2.2.3',
             'jquery' => '^3.3.1',
             'perfect-scrollbar' => '^1.4.0',
+            'pc-bootstrap4-datetimepicker'=> '^4.17.50',
             'select2' => '^4.0.6-rc.1',
         ];
         return array_merge($dependencies, $packages);

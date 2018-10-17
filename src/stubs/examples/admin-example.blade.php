@@ -61,22 +61,44 @@
             <form class="card-body">
 
                 {{--select2 zero config--}}
-                <div class="form-row">
-                    <div class="col-sm-2">
-                        <label>select2</label>
-                        <p class="text-muted">select input using select2 library</p>
+                <div class="form-group form-row">
+                    <div class="col-sm-2 col-form-label">
+                        <label for="select2">select2</label>
                     </div>
+
                     <div class="col-sm-6">
-                        <select class="form-control" data-toggle="select2">
+                        <select id="select2" class="form-control" data-toggle="select2">
                             <option>options</option>
                             <option>options</option>
                             <option>options</option>
                         </select>
                     </div>
-                    <div class="col-sm-4">
+
+                    <div class="col-sm-4 col-form-label">
                         <p class="text-danger">optional error message</p>
                     </div>
                 </div>
+
+                {{--datetimepicker js--}}
+                <div class="form-group form-row">
+                    <div class="col-sm-2 col-form-label">
+                        <label for="datetimepicker">datetimepicker</label>
+                        <p class="text-muted">datetimepicker + font awesome 5 icons</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class=" input-group">
+                            <span class="input-group-prepend">
+                                <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                            </span>
+                            <input type="text" id="datetimepicker" class="form-control" data-toggle="datetimepicker">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+
             </form>
         </div>
 
