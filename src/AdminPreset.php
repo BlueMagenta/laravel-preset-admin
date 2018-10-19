@@ -35,6 +35,7 @@ class AdminPreset extends Preset
             'codemirror'=> '^5.40.2',
             'datatables.net-bs4'=> "^1.10.19",
             'datatables.net-responsive-bs4'=> '^2.2.3',
+            'dropzone'=> '^5.5.1',
             'jquery' => '^3.3.1',
             'perfect-scrollbar' => '^1.4.0',
             'pc-bootstrap4-datetimepicker'=> '^4.17.50',

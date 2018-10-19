@@ -5,7 +5,9 @@ import 'datatables.net-responsive-bs4';
 import 'select2';
 import 'pc-bootstrap4-datetimepicker';
 import 'summernote/dist/summernote-bs4';
+import Dropzone from 'dropzone';
 
+Dropzone.autoDiscover = false;
 $.fn.select2.defaults.set('theme', 'bootstrap4 d-table-cell');
 $.extend(true, $.fn.datetimepicker.defaults, {
     icons: {
@@ -27,4 +29,5 @@ $(() => {
     $('[data-toggle=select2]').select2();
     $('[data-toggle=datetimepicker]').datetimepicker();
     $('[data-toggle=summernote]').summernote();
+    $('[data-toggle=dropzone]').each((index, element)=> $(element).dropzone({url: element.dataset.url}));
 });

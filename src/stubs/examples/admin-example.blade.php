@@ -83,7 +83,7 @@
                 <div class="form-group form-row">
                     <div class="col-sm-2 col-form-label">
                         <label for="datetimepicker">datetimepicker</label>
-                        <p class="text-muted">datetimepicker + font awesome 5 icons</p>
+                        <p class="text-muted">using font awesome 5 icons</p>
                     </div>
 
                     <div class="col-sm-6">
@@ -93,9 +93,6 @@
                             </span>
                             <input type="text" id="datetimepicker" class="form-control" data-toggle="datetimepicker">
                         </div>
-                    </div>
-
-                    <div class="col-sm-4">
                     </div>
                 </div>
 
@@ -107,6 +104,25 @@
 
                     <div class="col-sm-6">
                         <textarea id="summernote" class="form-control" data-toggle="summernote"></textarea>
+                    </div>
+
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+
+                {{--image upload preview--}}
+                <div class="form-group form-row">
+                    <div class="col-sm-2 col-form-label">
+                        <label for="dropzone">dropzone</label>
+                        <p class="text-muted">file uploader</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div  id="dropzone" class="dropzone dz-clickable form-control" data-toggle="dropzone" data-url="/" >
+                            <div class="dz-message h5">
+                                Drop files here or click to upload.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-sm-4">
