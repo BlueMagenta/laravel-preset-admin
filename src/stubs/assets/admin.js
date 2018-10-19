@@ -1,7 +1,10 @@
+import 'bootstrap';
 import '@coreui/coreui';
 import 'datatables.net-bs4';
 import 'datatables.net-responsive-bs4';
 import 'select2';
+import 'pc-bootstrap4-datetimepicker';
+import 'summernote/dist/summernote-bs4';
 
 $.fn.select2.defaults.set('theme', 'bootstrap4 d-table-cell');
 $.extend(true, $.fn.datetimepicker.defaults, {
@@ -18,7 +21,10 @@ $.extend(true, $.fn.datetimepicker.defaults, {
     }
 });
 
+
 $(() => {
     $('[data-toggle=datatable]').DataTable();
     $('[data-toggle=select2]').select2();
+    $('[data-toggle=datetimepicker]').datetimepicker();
+    $('[data-toggle=summernote]').summernote();
 });

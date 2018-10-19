@@ -99,6 +99,20 @@
                     </div>
                 </div>
 
+                {{--summernote--}}
+                <div class="form-group form-row">
+                    <div class="col-sm-2 col-form-label">
+                        <label for="summernote">summernote</label>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <textarea id="summernote" class="form-control" data-toggle="summernote"></textarea>
+                    </div>
+
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+
             </form>
         </div>
 

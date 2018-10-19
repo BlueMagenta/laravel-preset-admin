@@ -32,12 +32,14 @@ class AdminPreset extends Preset
             '@fortawesome/fontawesome-free'=> '^5.3.1',
             '@ttskch/select2-bootstrap4-theme' => "^1.0.4",
             'bootstrap' => '^4.0.0',
+            'codemirror'=> '^5.40.2',
             'datatables.net-bs4'=> "^1.10.19",
             'datatables.net-responsive-bs4'=> '^2.2.3',
             'jquery' => '^3.3.1',
             'perfect-scrollbar' => '^1.4.0',
             'pc-bootstrap4-datetimepicker'=> '^4.17.50',
             'select2' => '^4.0.6-rc.1',
+            'summernote'=> '^0.8.10',
         ];
         return array_merge($dependencies, $packages);
     }
