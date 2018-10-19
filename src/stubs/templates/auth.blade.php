@@ -7,6 +7,7 @@
 * Licensed under MIT (https://coreui.io/license)
 -->
 
+{{--little helper for displaying page title--}}
 @php($title = implode(' | ', array_filter([$title ?? false, config('app.name')])))
 
 <html lang="{{ app()->getLocale() }}">
@@ -26,7 +27,11 @@
 
 {{--content--}}
 <div class="container">
-    @yield('content')
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-sm-9">
+            @yield('content')
+        </div>
+    </div>
 </div>
 
 {{--script--}}

@@ -35,7 +35,7 @@
     </a>
 
     {{--header menu--}}
-    @include('templates.components.header-menu')
+    @include('templates.partials.header-menu')
 @endcomponent
 
 {{--main body--}}
@@ -45,7 +45,7 @@
     @component('templates.coreui.sidebar')
 
         {{--sidebar menu--}}
-        @include('templates.components.sidebar-menu')
+        @include('templates.partials.sidebar-menu')
     @endcomponent
 
     {{--main content--}}
