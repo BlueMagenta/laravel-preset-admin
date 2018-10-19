@@ -41,6 +41,8 @@ class AdminPreset extends Preset
             'pc-bootstrap4-datetimepicker'=> '^4.17.50',
             'select2' => '^4.0.6-rc.1',
             'summernote'=> '^0.8.10',
+            'showdown'=> '^1.8.7',
+            'showdown-xss-filter'=> '^0.2.0',
         ];
         return array_merge($dependencies, $packages);
     }
