@@ -1,15 +1,15 @@
 {
-    "name": "bluemagenta/admin-preset",
-    "description": "Custom, Admin Preset for Laravel",
+    "name": "bluemagenta/admin-template",
+    "description": "Scaffold admin view template for Laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": "haryo adi nugroho",
+            "name": "haryo adi",
             "email": "haryo.webapp@gmail.com"
         }
     ],
     "require": {
-        "illuminate/support": "~5.5"
+        "laravel/framework": "^5.5"
     },
     "autoload": {
         "psr-4": {
@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BlueMagenta\\AdminPreset\\AdminPresetServiceProvider"
+                "BlueMagenta\\AdminTemplate\\AdminTemplateServiceProvider"
             ]
         }
     }

@@ -5,7 +5,7 @@ namespace BlueMagenta\AdminPreset;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Console\Presets\Preset;
 
-class AdminPreset extends Preset
+class AdminTemplate extends Preset
 {
     /** Install the preset. */
     public static function install()
