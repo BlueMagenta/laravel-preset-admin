@@ -1,6 +1,21 @@
 
-mix.autoload({
+mix.js('resources/admin/admin.js', 'public/js')
+    .sass('resources/admin/admin.scss', 'public/css')
+    .autoload({
         jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'],
     })
-    .js('resources/assets/js/admin/admin.js', 'public/js')
-    .sass('resources/assets/sass/admin/admin.scss', 'public/css');
+    .extract([
+        '@coreui/coreui',
+        '@fortawesome/fontawesome-free',
+        'codemirror',
+        'datatables.net-bs4',
+        'datatables.net-responsive-bs4',
+        'dropzone',
+        'jquery',
+        'pc-bootstrap4-datetimepicker',
+        'perfect-scrollbar',
+        'select2',
+        'showdown',
+        'showdown-xss-filter',
+        'summernote',
+    ]);
