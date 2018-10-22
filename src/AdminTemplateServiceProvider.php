@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueMagenta\AdminPreset;
+namespace BlueMagenta\AdminTemplate;
 
 use Illuminate\Foundation\Console\PresetCommand;
 use Illuminate\Support\ServiceProvider;

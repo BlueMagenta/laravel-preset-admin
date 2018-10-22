@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueMagenta\AdminPreset;
+namespace BlueMagenta\AdminTemplate;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Console\Presets\Preset;
@@ -10,7 +10,7 @@ class AdminTemplate extends Preset
     /** Install the preset. */
     public static function install()
     {
-        //generate js, sass, & views
+        //copy js, sass, & view templates
         $filesystem = new Filesystem();
         $filesystem->copyDirectory(__DIR__.'/stubs/assets', resource_path('/admin'));
         $filesystem->copyDirectory(__DIR__.'/stubs/templates', resource_path('views/templates'));
