@@ -3,18 +3,8 @@ The package will generate admin template (and it's dependencies) for you,
 so you can start to create your pages directly. No need to setting up the template from the scratch
 
 ## Installation
-add the repository to `composer.json` (we need it because I haven't register this to `Packagist` yet)
 
-```php
-"repositories":[
-    {
-        "type": "vcs",
-        "url": "https://github.com/bluemagenta/admin-template.git"
-    }
-],
-``` 
-
-then use `require` command
+use `composer require` command
 ```
 composer require bluemagenta/admin-template
 ```
