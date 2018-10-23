@@ -28,21 +28,23 @@ class AdminTemplate extends Preset
     protected static function updatePackageArray(array $packages)
     {
         $dependencies = [
-            '@coreui/coreui'=> '^2.0.4',
-            '@fortawesome/fontawesome-free'=> '^5.3.1',
+            '@coreui/coreui' => '^2.0.4',
+            '@fortawesome/fontawesome-free' => '^5.3.1',
             '@ttskch/select2-bootstrap4-theme' => "^1.0.4",
             'bootstrap' => '^4.0.0',
-            'codemirror'=> '^5.40.2',
-            'datatables.net-bs4'=> "^1.10.19",
-            'datatables.net-responsive-bs4'=> '^2.2.3',
-            'dropzone'=> '^5.5.1',
+            'chalk' => '^2.4.1',
+            'codemirror' => '^5.40.2',
+            'datatables.net-bs4' => "^1.10.19",
+            'datatables.net-responsive-bs4' => '^2.2.3',
+            'dropzone' => '^5.5.1',
             'jquery' => '^3.3.1',
+            'pc-bootstrap4-datetimepicker' => '^4.17.50',
             'perfect-scrollbar' => '^1.4.0',
-            'pc-bootstrap4-datetimepicker'=> '^4.17.50',
+            'popper.js' => '^1.14.4',
             'select2' => '^4.0.6-rc.1',
-            'summernote'=> '^0.8.10',
-            'showdown'=> '^1.8.7',
-            'showdown-xss-filter'=> '^0.2.0',
+            'summernote' => '^0.8.10',
+            'showdown' => '^1.8.7',
+            'showdown-xss-filter' => '^0.2.0',
         ];
         return array_merge($dependencies, $packages);
     }
