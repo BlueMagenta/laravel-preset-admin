@@ -1,0 +1,30 @@
+{
+    "name": "bluemagenta/admin-template",
+    "description": "Scaffold admin view template for Laravel",
+    "keywords": ["laravel", "admin", "template", "preset", "frontend"],
+    "homepage": "https://github.com/bluemagenta/admin-template",
+    "readme": "readme.md",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "haryo adi",
+            "email": "haryo.webapp@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "BlueMagenta\\AdminTemplate\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BlueMagenta\\AdminTemplate\\AdminTemplateServiceProvider"
+            ]
+        }
+    }
+}
