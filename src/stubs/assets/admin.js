@@ -9,6 +9,7 @@ import Dropzone from 'dropzone';
 import showdown from 'showdown';
 import xssFilter from 'showdown-xss-filter';
 
+//config the plugins
 let converter = new showdown.Converter({extensions: [xssFilter]});
 Dropzone.autoDiscover = false;
 $.fn.select2.defaults.set('theme', 'bootstrap4 d-table-cell');
@@ -26,7 +27,7 @@ $.extend(true, $.fn.datetimepicker.defaults, {
     }
 });
 
-
+//init js plugins by data toggle on ready setup
 $(() => {
     $('[data-toggle=datatable]').DataTable();
     $('[data-toggle=select2]').select2();
@@ -38,3 +39,6 @@ $(() => {
         $(event.target.dataset.target).html(converter.makeHtml($(event.target.dataset.source).val()));
     });
 });
+
+//bind jquery to global window, so we can use it from blade
+global.$ = $;
