@@ -9,7 +9,12 @@ use `composer require` command
 composer require bluemagenta/admin-template
 ```
 
-get the assets by using
+copy the files
+```
+php artisan preset admin
+```
+
+install the assets by using
 ```
 npm install
 ``` 
