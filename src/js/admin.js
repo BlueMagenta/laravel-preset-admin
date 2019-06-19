@@ -8,11 +8,13 @@ import 'summernote/dist/summernote-bs4';
 import Dropzone from 'dropzone';
 import showdown from 'showdown';
 import xssFilter from 'showdown-xss-filter';
+import * as pages from './pages/index';
 
 //config the plugins
 let converter = new showdown.Converter({extensions: [xssFilter]});
 Dropzone.autoDiscover = false;
-$.fn.select2.defaults.set('theme', 'bootstrap4 d-table-cell');
+$.fn.select2.defaults.set('theme', 'bootstrap4');
+$.fn.select2.defaults.set('width', '100%');
 $.extend(true, $.fn.datetimepicker.defaults, {
     icons: {
         time: 'far fa-clock',
@@ -27,18 +29,23 @@ $.extend(true, $.fn.datetimepicker.defaults, {
     }
 });
 
-//init js plugins by data toggle on ready setup
 $(() => {
-    $('[data-toggle=datatable]').DataTable();
-    $('[data-toggle=select2]').select2();
-    $('[data-toggle=datetimepicker]').datetimepicker();
-    $('[data-toggle=summernote]').summernote();
-    $('[data-toggle=dropzone]').each((index, element)=> $(element).dropzone({url: element.dataset.url}));
-    $('[data-toggle=markdown]').each((index, element)=> element.innerHTML = converter.makeHtml(element.innerText));
-    $('body').on('click', '[data-toggle=markdown-preview]', (event) => {
+    //init plugins
+    $('[data-plugin=datatable]').DataTable();
+    $('[data-plugin=select2]').select2();
+    $('[data-plugin=datetimepicker]').datetimepicker();
+    $('[data-plugin=summernote]').summernote();
+    $('[data-plugin=dropzone]').each((index, element) => $(element).dropzone({url: element.dataset.url}));
+    $('[data-plugin=markdown]').each((index, element) => element.innerHTML = converter.makeHtml(element.innerText));
+    $('[data-plugin=markdown-preview]').click((event) => {
         $(event.target.dataset.target).html(converter.makeHtml($(event.target.dataset.source).val()));
     });
-});
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
-//bind jquery to global window, so we can use it from blade
-global.$ = $;
+    //init page js
+    $('[data-page]').each((index, element) => new pages[element.dataset.page]);
+});
