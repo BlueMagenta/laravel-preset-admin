@@ -10,8 +10,3 @@
 @import "~pc-bootstrap4-datetimepicker/src/sass/bootstrap-datetimepicker-build";
 @import "~summernote/dist/summernote-bs4.css";
 @import "~dropzone/dist/dropzone.css";
-
-//fix logo width since we remove a button next to it
-.app-header .navbar-brand{
-  width: 200px;
-}
