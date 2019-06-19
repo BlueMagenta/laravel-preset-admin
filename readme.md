@@ -1,6 +1,6 @@
 # Scaffold Admin Template for Laravel
-The package will generate admin template (and it's dependencies) for you, 
-so you can start to create your pages directly. No need to setting up the template from the scratch
+The package will generate admin template and it's dependencies for you, 
+so you can start to create your pages directly. No need to set up the template from the scratch
 
 ## Installation
 
@@ -14,60 +14,53 @@ copy the files
 php artisan preset admin
 ```
 
-install the assets by using
+install & compile the assets by using
 ```
-npm install
+npm install && npm run dev
 ``` 
 
-and compile it
-```
-npm run dev
-```
-
 ## How to Use
-just extend `templates/admin.blade.php` or `templates/auth.blade.php` in your page
+just extend `templates/admin.blade.php` or `templates/blank.blade.php` in your page
 
 ```blade
 @extends('templates.admin')
 
 //or
 
-@extends('templates.auth')
+@extends('templates.blank')
 ``` 
 
-you can edit the `logo`, `sidebar menu`, or `header menu` in `templates/*` and `templates/partials/*` files.
-if you need more customization, feel free to edit everything else
+open `templates\components` to edit the `header`, `sidebar`, `footer`.
+if you need more customization, feel free to edit everything else in `templates` folder
 
-Currently the templates is based on [Coreui - free version](https://coreui.io/) which is using [bootstrap 4](https://getbootstrap.com/). 
+The templates is created by using [Coreui - free version](https://coreui.io/) which is using [bootstrap 4](https://getbootstrap.com/). 
 Please visit these sites for the preview and more information about any available UI components.
 
-you can also open `examples/admin.blade.php` or `examples/login.blade.php` for my examples.
+you can also open `views/examples` folder for my examples.
 
 ## The Generated Files
 
 The package will add these files to your `resources/` folder:
 ```
-admin/
+js/
 |- admin.js
-|- admin.css
-|- img/*   // any image needed for example page
+
+sass/
+|- admin.scss
 
 views/
 |- templates/
-| |- bootstrap4/*  //blade components for bootstrap component
-| |- coreui/*      //blade components for coreui layout
-| |- partials/
-| | |- header-menu.blade.php
-| | |- sidebar-menu.blade.php
+| |- components/*    //blade components for any parts in the template
 | |- admin.blade.php
-| |- auth.blade.php
+| |- blank.blade.php
 |- examples/
-| | admin.blade.php
+| | forms.blade.php  //example for any form input libraries
+| | js.blade.php     //example for a page with js script
 | | login.blade.php
 ```
 
 ## Uninstall
-This package is intended for one time use only, during inital setup of your project.
+This package is intended for one time use only, during initial setup of your project.
 After the files generated successfully, you can uninstall it safely without losing the files
 
 ```
