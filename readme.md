@@ -90,4 +90,4 @@ The MIT License (MIT). Please see [the file](license.md) for more information.
 ## Additional Notes
 This package is open to public, but is intended for my personal use. 
 
-Feel free to use it if you find its helpful. When you find something lack in the package, you can extend it by forking it.
+Feel free to use it if you find it helpful. When you find something lack in the package, you can extend it by forking it.

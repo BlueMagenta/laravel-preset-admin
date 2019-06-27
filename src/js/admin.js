@@ -11,7 +11,7 @@ import xssFilter from 'showdown-xss-filter';
 import * as pages from './pages/index';
 
 //config the plugins
-let converter = new showdown.Converter({extensions: [xssFilter]});
+const converter = new showdown.Converter({extensions: [xssFilter]});
 Dropzone.autoDiscover = false;
 $.fn.select2.defaults.set('theme', 'bootstrap4');
 $.fn.select2.defaults.set('width', '100%');
@@ -30,21 +30,31 @@ $.extend(true, $.fn.datetimepicker.defaults, {
 });
 
 $(() => {
+    const csrf = $('meta[name="csrf-token"]').attr('content');
+
     //init plugins
     $('[data-plugin=datatable]').DataTable();
     $('[data-plugin=select2]').select2();
     $('[data-plugin=datetimepicker]').datetimepicker();
     $('[data-plugin=summernote]').summernote();
-    $('[data-plugin=dropzone]').each((index, element) => $(element).dropzone({url: element.dataset.url}));
+    $('[data-plugin=dropzone]').each((index, element) => $(element).dropzone({
+        url: element.dataset.url,
+        headers: {'X-CSRF-TOKEN': csrf},
+        init() {
+            if (!('multiple' in element.dataset)) {  //set to single file if multiple dataset not exist
+                this.on('addedfile', function () {
+                    if (this.files.length > 1){
+                        this.removeFile(this.files[0]);
+                    }
+                })
+            }
+        }
+    }));
     $('[data-plugin=markdown]').each((index, element) => element.innerHTML = converter.makeHtml(element.innerText));
-    $('[data-plugin=markdown-preview]').click((event) => {
+    $('[data-plugin=markdown-preview]').on('click', (event) => {
         $(event.target.dataset.target).html(converter.makeHtml($(event.target.dataset.source).val()));
     });
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
+    $.ajaxSetup({headers: {'X-CSRF-TOKEN': csrf}});
 
     //init page js
     $('[data-page]').each((index, element) => new pages[element.dataset.page]);

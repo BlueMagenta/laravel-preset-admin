@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            {{--image upload preview--}}
+            {{--image upload--}}
             <div class="form-group form-row">
                 <div class="col-md-2 col-form-label">
                     <label for="dropzone">dropzone</label>
@@ -123,7 +123,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div  id="dropzone" class="dropzone dz-clickable form-control" data-plugin="dropzone" data-url="/upload" >
+                    <div id="dropzone" class="dropzone dz-clickable form-control" data-plugin="dropzone" data-url="/">
                         <div class="dz-message h5">
                             Drop files here or click to upload.
                         </div>
