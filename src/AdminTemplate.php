@@ -10,18 +10,15 @@ class AdminTemplate extends Preset
     /** Install the preset. */
     public static function install()
     {
-        //copy js, sass, & view templates
+        //copy js, sass, mix config, & view templates
         $filesystem = new Filesystem();
         $filesystem->copyDirectory(__DIR__.'/js', resource_path('js'));
         $filesystem->copyDirectory(__DIR__.'/sass', resource_path('sass'));
         $filesystem->copyDirectory(__DIR__.'/views', resource_path('views'));
+        $filesystem->copy(__DIR__.'/admin.mix.js', base_path());
 
         //update npm package
         static::updatePackages();
-
-        //update webpack.mix.js
-        $newContent = file_get_contents(__DIR__.'/webpack.mix.stub');
-        file_put_contents(base_path('webpack.mix.js'), $newContent, FILE_APPEND);
     }
 
     /** npm package configuration */
@@ -38,6 +35,7 @@ class AdminTemplate extends Preset
             'datatables.net-responsive-bs4' => '^2.2.3',
             'dropzone' => '^5.5.1',
             'jquery' => '^3.2',
+            'laravel-mix-merge-manifest' => '^0.1.2',
             'pc-bootstrap4-datetimepicker' => '^4.17.50',
             'perfect-scrollbar' => '^1.4.0',
             'popper.js' => '^1.12',

@@ -14,10 +14,27 @@ copy the files
 php artisan preset admin
 ```
 
-install & compile the assets by using
+install the assets
 ```
-npm install && npm run dev
-``` 
+npm install
+```
+
+add the compile command to `package.json`
+```
+...
+"scripts": {
+  ... //existing command (dev, prod, etc)
+  "dev-admin: npm run dev -- --env.mixfile=admin.mix.js"
+  "prod-admin: npm run prod -- --env.mixfile=admin.mix.js"
+  "watch-admin: npm run watch -- --env.mixfile=admin.mix.js"
+},
+...
+```
+
+then run it
+```
+npm run dev-admin
+```
 
 ## How to Use
 just extend `templates/admin.blade.php` or `templates/blank.blade.php` in your page
