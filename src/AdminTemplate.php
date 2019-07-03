@@ -12,10 +12,10 @@ class AdminTemplate extends Preset
     {
         //copy js, sass, mix config, & view templates
         $filesystem = new Filesystem();
-        $filesystem->copyDirectory(__DIR__.'/js', resource_path('js'));
-        $filesystem->copyDirectory(__DIR__.'/sass', resource_path('sass'));
-        $filesystem->copyDirectory(__DIR__.'/views', resource_path('views'));
-        $filesystem->copy(__DIR__.'/admin.mix.js', base_path());
+        $filesystem->copyDirectory(__DIR__.'/../resources/js', resource_path('js'));
+        $filesystem->copyDirectory(__DIR__.'/../resources/sass', resource_path('sass'));
+        $filesystem->copyDirectory(__DIR__.'/../resources/views', resource_path('views'));
+        $filesystem->copy(__DIR__.'/../resources/admin.mix.js', base_path());
 
         //update npm package
         static::updatePackages();

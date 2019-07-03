@@ -8,7 +8,7 @@ import 'summernote/dist/summernote-bs4';
 import Dropzone from 'dropzone';
 import showdown from 'showdown';
 import xssFilter from 'showdown-xss-filter';
-import * as pages from './pages/index';
+import * as pages from './pages';
 
 //config the plugins
 const converter = new showdown.Converter({extensions: [xssFilter]});
