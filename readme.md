@@ -19,22 +19,26 @@ install the assets
 npm install
 ```
 
-add the compile command to `package.json`
-```
-...
-"scripts": {
-  ... //existing command (dev, prod, etc)
-  "dev-admin: npm run dev -- --env.mixfile=admin.mix.js"
-  "prod-admin: npm run prod -- --env.mixfile=admin.mix.js"
-  "watch-admin: npm run watch -- --env.mixfile=admin.mix.js"
-},
-...
+add the build command to `package.json`
+```json
+{
+  "scripts": { 
+    "dev-admin": "npm run development -- --env.mixfile=admin.mix",
+    "prod-admin": "npm run production -- --env.mixfile=admin.mix",
+    "watch-admin": "npm run development -- --env.mixfile=admin.mix --watch"
+  }
+}
 ```
 
 then run it
 ```
 npm run dev-admin
 ```
+
+> if you still using `npm run dev` for public assets, 
+please apply [laravel-mix-merge-manifest](https://github.com/kabbouchi/laravel-mix-merge-manifest) to `webpack.mix.js`
+so it won't override our admin assets `mix-manifest.js`
+
 
 ## How to Use
 just extend `templates/admin.blade.php` or `templates/blank.blade.php` in your page
